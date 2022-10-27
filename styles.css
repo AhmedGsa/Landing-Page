@@ -1,0 +1,620 @@
+:root {
+    --main-color: #00fff1;
+    --secondary-color: #dcdfe4;
+    --text-color: #9da9c2;
+}
+
+* {
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    font-family: "Dosis",sans-serif;
+}
+
+body {
+    margin: 0;
+    color: white;
+    font-size: 22px;
+    font-weight: 600;
+}
+
+.container {
+    padding: 10px 12%;
+}
+
+.home {
+    background: url(images/background1.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .logo {
+    color: var(--main-color);
+    margin: 0;
+    cursor: pointer;
+}
+
+header .container a {
+    margin-right: 20px;
+    cursor: pointer;
+    position: relative;
+}
+
+header a i {
+    margin-left: 5px;
+}
+
+header .container a::after {
+    content: "";
+    height: 3px;
+    background-color: white;
+    position: absolute;
+    bottom: -3px;
+    left: 0;
+    width: 0;
+}
+
+header .container a:hover::after {
+    width: 68%;
+    transition: 0.4s;
+}
+
+header .right {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header .right .button {
+    padding: 15px 25px;
+    background-color: var(--main-color);
+    color: black;
+    border-radius: 10px;
+    margin-right: 30px;
+    cursor: pointer;
+    border: 1px solid transparent;
+}
+
+header .right .button:hover {
+    background-color: transparent;
+    color: white;
+    border: 1px solid white;
+    transition: 0.4s;
+}
+
+header .right i {
+    cursor: pointer;
+    display: none;
+}
+
+.landing .container {
+    margin: 200px 10%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.landing .content {
+    max-width: 500px;
+}
+
+.landing .content p {
+    color: var(--secondary-color);
+    margin: 80px 0;
+}
+
+.landing .content .buttons {
+    display: flex;
+}
+
+.landing .content .buttons .button {
+    padding: 15px 25px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.landing .content .buttons .button:first-child {
+    background-color: var(--main-color);
+    color: black;
+    margin-right: 30px;
+    border: 1px solid white;
+}
+
+.landing .content .buttons .button:last-child {
+    border: 1px solid white;
+}
+
+.landing .content .buttons .button:hover {
+    background-color: #333;
+    color: white;
+    transition: 0.4s;
+}
+
+.features {
+    background-color: white;
+    color: black;
+    text-align: center;
+    font-weight: 500;
+    line-height: 1.5;
+}
+
+.features .container {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+
+.features .container h1 {
+    max-width: 300px;
+    margin: 0 auto;
+}
+
+.features .container hr {
+    width: 130px;
+    border: 3px solid var(--main-color);
+    background-color: var(--main-color);
+}
+
+.features .container .features-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 40px;
+    margin-bottom: 50px;
+}
+
+.features .feature {
+    box-shadow: 1px 2px #eee;
+}
+
+.features .feature p {
+    color: var(--text-color);
+}
+
+.features .feature i {
+    background-color: #eee;
+    padding: 20px;
+    border-radius: 50%;
+    color: #333;
+}
+
+.details {
+    color: #333;
+    display: flex;
+}
+
+.details .img {
+    width: 100%;
+    flex-basis: 40%;
+}
+
+.details .details-text {
+    padding: 100px;
+    flex-basis: 60%;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    background-color: #f5f6fa;
+}
+
+.details .details-text h1 {
+    max-width: 400px;
+}
+
+.details .details-text p, .download .download-text p {
+    max-width: 700px;
+    color: var(--text-color);
+}
+
+.details img {
+    width: 100%;
+}
+
+.download {
+    display: flex;
+    color: #333;
+    padding: 20px 0;
+}
+
+.download .download-left {
+    flex-basis: 45%;
+}
+
+.download .download-left {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: center;
+}
+
+.download .download-text {
+    text-align: end;
+}
+
+.download .download-left button {
+    background-color: var(--main-color);
+    border: 1px solid var(--main-color);
+    border-radius: 10px;
+    padding: 20px;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 20px;
+}
+
+.download .download-left button:hover {
+    transition: 0.4s;
+    border: 1px solid #999;
+    color: white;
+    background-color: #223047;
+}
+
+.download .download-img {
+    flex-basis: 55%;
+    padding: 50px;
+}
+
+.extra .container {
+    color: #333;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.extra .cards {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 40%;
+    gap: 20px;
+}
+
+.extra .card {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    box-shadow: 1px 1px 8px 1px #eee;
+    padding: 20px 30px;
+}
+
+.extra .card:nth-child(2) {
+    align-items: flex-start;
+    background-color: var(--main-color);
+}
+
+.extra .card:nth-child(2) h3 {
+    margin-top: 0;
+}
+
+.extra .card:nth-child(2) i {
+    margin-top: 10px;
+}
+
+.extra .card p {
+    max-width: 500px;
+}
+
+.requirements .container {
+    color: #333;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 100px;
+}
+
+.requirements .requirements-text {
+    flex-basis: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.requirements .requirements-text p {
+    text-align: end;
+}
+
+.requirements .paint {
+    width: 40%;
+    box-shadow: 2px 0px 8px 4px #ccc;
+    position: relative;
+}
+
+.requirements .paint::before {
+    content: "";
+    width: 60%;
+    background-color: #333;
+    height: calc(100% + 100px);
+    position: absolute;
+    bottom: 0;
+    left: 20%;
+    box-shadow: 2px 0px 8px 1px #ccc;
+}
+
+.requirements .device {
+    display: flex;
+    align-items: center;
+}
+
+.requirements .device i {
+    background-color: var(--main-color);
+    margin-right: 15px;
+    border: 1px solid black;
+    border-radius: 50%;
+    padding: 2px;
+}
+
+.video {
+    background-color: #223047;
+    padding: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.video i {
+    color: #223047;
+    border: 1px solid var(--main-color);
+    border-radius: 50%;
+    background-color: var(--main-color);
+    padding: 20px;
+    width: 64.22px;
+    padding-left: 24px;
+}
+
+.video i:hover {
+    transition: 0.4s;
+    background-color: #223047;
+    border-color: var(--main-color);
+    color: var(--main-color);
+    cursor: pointer;
+}
+
+.video p {
+    text-align: center;
+    max-width: 60%;
+}
+
+.download-2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #333;
+    padding: 100px 20%;
+    text-align: center;
+}
+
+.download-2 .download-btn {
+    background-color: var(--main-color);
+    border: 1px solid var(--main-color);
+    padding: 20px 50px;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 20px;
+    box-shadow: 1px 1px 8px 1px #eee;
+}
+
+.download-2 .download-btn:hover {
+    transition: 0.4s;
+    background-color: #223047;
+    color: white;
+}
+
+.download-2 .download-btn h3 {
+    margin: 0;
+}
+
+.text {
+    background-color: #223047;
+    text-align: center;
+    padding: 100px 20%;
+}
+
+.get-app {
+    position: relative;
+    background-color: #f5f6fa;
+}
+
+.get-app .get-app-content {
+    display: flex;
+    padding: 60px 15%;
+    color: #333;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.get-app .get-app-text {
+    flex-basis: 40%;
+}
+
+.get-app .get-app-btn {
+    background-color: var(--main-color);
+    border: 1px solid var(--main-color);
+    padding: 20px 50px;
+    cursor: pointer;
+    font-size: 20px;
+    box-shadow: 1px 1px 8px 5px #eee;
+    max-width: 25%;
+    min-width: 200px;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #223047;
+}
+
+.get-app .get-app-btn:hover {
+    transition: 0.4s;
+    background-color: #223047;
+    color: white;
+}
+
+.get-app .get-app-btn h3 {
+    margin: 0;
+    text-align: center;
+}
+
+.bottom-nav {
+    margin-bottom: 100px;
+}
+
+.bottom-nav .nav {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    color: #333;
+    padding: 50px 0;
+}
+
+.bottom-nav .nav a {
+    color: var(--text-color);
+    display: block;
+    margin-bottom: 5px;
+}
+
+.bottom-nav .nav a:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.bottom-nav .subscribe {
+    color: #333;
+    text-align: center;
+}
+
+.subscribe .subscribe-box {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+}
+
+.subscribe .subscribe-box input {
+    width: 40%;
+    background-color: #f5f6fa;
+    border-radius: 2px;
+    border-style: hidden;
+    padding: 20px;
+    outline: none;
+}
+
+.subscribe .subscribe-box input::placeholder {
+    font-size: 18px;
+}
+
+.subscribe .subscribe-box .subscribe-btn {
+    background-color: var(--main-color);
+    border: 1px solid var(--main-color);
+    padding: 20px 50px;
+    cursor: pointer;
+    font-size: 20px;
+    box-shadow: 1px 1px 8px 5px #eee;
+    max-width: 25%;
+    min-width: 200px;
+    color: #223047;
+}
+
+.subscribe .subscribe-box .subscribe-btn:hover {
+    transition: 0.4s;
+    background-color: #223047;
+    color: white;
+}
+
+.subscribe .subscribe-box .subscribe-btn h1 {
+    margin: 0;
+    font-weight: 600;
+}
+
+footer {
+    background-color: #223047;
+}
+
+footer .container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    color: var(--main-color);
+}
+
+footer .social i {
+    margin-right: 15px;
+    color: white;
+}
+
+footer .social i:hover {
+    cursor: pointer;
+}
+
+@media (max-width: 1499px) {
+    .landing .container {
+        margin: 200px 0;
+        padding: 100px 10% ;
+    }
+}
+
+@media (max-width: 999px) {
+    .container {
+        padding: 10px 10%;
+    }
+    .main-nav {
+        display: none;
+    }
+    header .right i {
+        display: block;
+    }
+    .landing .container {
+        margin: 200px 0;
+        padding: 100px;
+        justify-content: center;
+        text-align: center;
+    }
+    .landing .container .image {
+        display: none;
+    }
+    .details {
+        flex-direction: column;
+    }
+    .download .download-img {
+        display: none;
+    }
+    .download .download-left {
+        flex-basis: 100%;
+        align-items: center;
+    }
+    .download .download-text {
+        text-align: center;
+    }
+    .extra .extra-img {
+        display: none;
+    }
+    .extra .cards {
+        flex-basis: 100%;
+    }
+    .requirements .paint, .requirements .paint::before {
+        display: none;
+    }
+    .requirements .requirements-text {
+        flex-basis: 100%;
+        align-items: center;
+    }
+    .requirements .requirements-text p {
+        text-align: center;
+    }
+    .video p {
+        max-width: 80%;
+    }
+    .get-app .get-app-content {
+        flex-direction: column;
+    }
+    .get-app .get-app-text {
+        text-align: center;
+    }
+    .subscribe .subscribe-box {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@media (max-width: 767px) {
+    .container {
+        padding: 10px 20px;
+    }
+}
